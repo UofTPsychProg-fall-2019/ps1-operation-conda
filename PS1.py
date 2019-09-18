@@ -23,12 +23,14 @@ print(coder1)
 coder2_1 = 42. + 13
 print(coder2_1)
 
-coder2_2 = 42 + 'is the meaning of the universe'
+# Rebekah: fixed
+coder2_2 = str(42) + ' is the meaning of the universe'
 print(coder2_2)
 
 # now the second group member should define a variable with an error
 # and then commit and push changes to GitHub
-coder3 =
+# Rebekah: added variable definition with an error
+coder3 = this is a string
 
 # etc. until all group members have fixed and made 1 error
 
