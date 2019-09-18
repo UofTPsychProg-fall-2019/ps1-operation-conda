@@ -18,8 +18,13 @@ print(coder1)
 
 # second group member's error to fix
 # from Rebekah: this has a valid output as far as I can see? unless I'm misunderstanding the task shouldn't there be an issue with this?
-coder2 = 42. + 13
-print(coder2)
+#Juliana: my mistake! I was trying to be tricky and made '42.' a float, thinking you couldn't combine it with an integer...
+#con't: while forgetting that those actually can be added! Updated with a new error
+coder2_1 = 42. + 13
+print(coder2_1)
+
+coder2_2 = 42 + 'is the meaning of the universe'
+print(coder2_2)
 
 # now the second group member should define a variable with an error
 # and then commit and push changes to GitHub
