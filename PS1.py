@@ -17,6 +17,7 @@ coder1 = 'hello world! python line' + str(1)
 print(coder1)
 
 # second group member's error to fix
+# from Rebekah: this has a valid output as far as I can see? unless I'm misunderstanding the task shouldn't there be an issue with this?
 coder2 = 42. + 13
 print(coder2)
 
@@ -30,16 +31,17 @@ coder3 =
 
 #%%  Part 2  find and remove the invalid response______________________________
 
+# Rebekah: added some answers here
+
 # imagine these are a list of reaction times that you recorded 
 rt = [400, 450, 500, 440, -1, 410, 570]
 
 # the -1 indicates missing data. Your job is to remove it
 # use the index method to find the missing value 
-missing_rt =
+missing_rt = rt.index(-1)
 
 # and then use missing_rt to remove the trial from rt
-clean_rt =
-
+clean_rt = rt[0:missing_rt] + rt[missing_rt+1:]
 
 # now you have data with more than one missing value
 rt_trouble = [400, 450, 500, 440, -1, 410, 570, -1, 400]
@@ -47,7 +49,10 @@ rt_trouble = [400, 450, 500, 440, -1, 410, 570, -1, 400]
 # try the same procedure. Does it work? 
 # use a comment to explain why or why not below in comments
 
-
+# Rebekah: Attempting to use the index function only allows you to pick out 
+# the first instance of -1 in the list. You would need to run it twice to create 
+# a new value for missing_rt after removing the first faulty value, or use a 
+# loop to go through the entire list and catch every single one individually.
 
 # now write an if statement that you can use to remove the frist missing value 
 # only when there is a missing value (-1) in a list 
