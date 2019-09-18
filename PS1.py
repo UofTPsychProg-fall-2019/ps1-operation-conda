@@ -30,7 +30,14 @@ print(coder2_2)
 # now the second group member should define a variable with an error
 # and then commit and push changes to GitHub
 # Rebekah: added variable definition with an error
-coder3 = this is a string
+# Emily: Fixed Rebekah's string by adding quotations.
+coder3 = "this is a string"
+print(coder3)
+
+#Emily: created a new variable definition with an error:
+
+3rdVariable = 123
+
 
 # etc. until all group members have fixed and made 1 error
 
@@ -61,7 +68,7 @@ rt_trouble = [400, 450, 500, 440, -1, 410, 570, -1, 400]
 # a new value for missing_rt after removing the first faulty value, or use a 
 # loop to go through the entire list and catch every single one individually.
 
-# now write an if statement that you can use to remove the frist missing value 
+# now write an if statement that you can use to remove the first missing value 
 # only when there is a missing value (-1) in a list 
 # this statement should always generate a clean_rt list; if there's no missing
 # data clean_rt is set to the original rt list.   
