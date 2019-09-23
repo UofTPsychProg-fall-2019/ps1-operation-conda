@@ -35,9 +35,17 @@ coder3 = "this is a string"
 print(coder3)
 
 #Emily: created a new variable definition with an error:
+# Gaeun: Fixed Emily's variable name (3rdVariable) 
+#        by changning the first letter as character rather than number. 
+ThirdVariable = 123
+coder4 = ThirdVariable 
+print(coder4)
 
-3rdVariable = 123
-
+# Gaeun created a new variable with an error.
+def = 'definition'
+# Gaune: I was the last member, so I corrected mine. 
+# def is pre-difined function name, and we should use some other name.
+Def = 'definition' 
 
 # etc. until all group members have fixed and made 1 error
 
@@ -46,6 +54,7 @@ print(coder3)
 #%%  Part 2  find and remove the invalid response______________________________
 
 # Rebekah: added some answers here
+# Gaeun: also added some answers here 
 
 # imagine these are a list of reaction times that you recorded 
 rt = [400, 450, 500, 440, -1, 410, 570]
@@ -71,10 +80,20 @@ rt_trouble = [400, 450, 500, 440, -1, 410, 570, -1, 400]
 # now write an if statement that you can use to remove the first missing value 
 # only when there is a missing value (-1) in a list 
 # this statement should always generate a clean_rt list; if there's no missing
-# data clean_rt is set to the original rt list.   
+# data clean_rt is set to the original rt list.
 
-
-
+# Gaeun: I tried like below and it seems working. But the code became a bit lengthy. 
+# I think there might be some better way. Any idea to make the code more simpler?
+# rt = [300, 400, 500, 600] # << example data set without missing rt
+rt = rt_trouble
+curr_rt = rt
+for i in curr_rt[0:]:    
+    if i < 0:
+        missing_rt = curr_rt.index(i)
+        clean_rt = curr_rt[0:missing_rt] + curr_rt[missing_rt+1:]
+        curr_rt = clean_rt
+print(curr_rt)    
+        
 # for the last section, you will work with a list of lists:
 rt_new = [400, 450, 500, 440, -1, 410, 570]
 trial_num = [1,2,3,4,5,6,7]
@@ -87,4 +106,9 @@ data = [rt_new, trial_num, accuracy]
 # and remove it from all sublists in data 
 # be sure to only work with the master data list, to practice indexing 
 # lists of lists
+
+# Gaeun: I tried like below.
+missing_trial = rt_new.index(-1)
+for i2 in [0,1,2]:
+    data[i2] = data[i2][0:missing_trial] + data[i2][missing_trial+1:]
 
