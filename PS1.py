@@ -93,6 +93,16 @@ for i in curr_rt[0:]:
         clean_rt = curr_rt[0:missing_rt] + curr_rt[missing_rt+1:]
         curr_rt = clean_rt
 print(curr_rt)    
+
+# Juliana: you can express the above more succinctly like this:
+# we should coordinate next time so that everyone gets to contribute equally.
+rt = rt_trouble
+for i in rt:
+    if i < 0:
+       missing_rt = rt.index(i)
+       clean_rt = rt[0:missing_rt] + rt[missing_rt+1:]
+       rt = clean_rt
+print(rt)
         
 # for the last section, you will work with a list of lists:
 rt_new = [400, 450, 500, 440, -1, 410, 570]
