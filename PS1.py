@@ -103,6 +103,15 @@ for i in rt:
        clean_rt = rt[0:missing_rt] + rt[missing_rt+1:]
        rt = clean_rt
 print(rt)
+
+#Emily: a different approach to clean the list; I initialized an empty list and added 
+#any values that weren't -1 from the original list to it
+rt_clean_em = [] 
+for i in rt_trouble:
+    if i != -1:
+        rt_clean_em.append(i)
+print(rt_trouble)
+print(rt_clean_em)
         
 # for the last section, you will work with a list of lists:
 rt_new = [400, 450, 500, 440, -1, 410, 570]
