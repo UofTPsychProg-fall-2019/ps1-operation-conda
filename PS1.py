@@ -130,4 +130,16 @@ data = [rt_new, trial_num, accuracy]
 missing_trial = rt_new.index(-1)
 for i2 in [0,1,2]:
     data[i2] = data[i2][0:missing_trial] + data[i2][missing_trial+1:]
+   
+'''
+Another approach for this question; it only works if the "accuracy" list has 7 elements though 
+rt_clean_master = [[],[],[]] 
+for i in range(len(data[0])):
+    if data[0][i] != -1:
+        rt_clean_master[0].append(data[0][i])
+        rt_clean_master[1].append(data[1][i])
+        rt_clean_master[2].append(data[2][i])
+print(data[2])
+print(rt_clean_master[2])
+'''
 
